@@ -24,8 +24,8 @@ const Home: NextPage = () => {
         <p>Senior engineer that leads teams to create intentional digital products</p>
 
         <p>
-          I’m a technical lead that understands aligning business goals, project outcomes, and user needs with digital
-          products.
+          I’m a senior engineer that leads teams and has a deep understanding of aligning business goals, project
+          outcomes, and user needs when creating digital products.
         </p>
 
         <h1>Work</h1>
@@ -33,34 +33,34 @@ const Home: NextPage = () => {
           <WorkTile
             overline={'Technical Lead'}
             label={'BIG W Mobile App'}
-            description={
-              'Discover how I lead the BIG W mobile app team. Here’s some more copy discussing how great I am without sounding to up myself.'
-            }
+            description={`I lead the BIG W mobile app team and created an ecommerce app for one of Australia's largest retailers.`}
           />
 
           <WorkTile
             overline={'Technical Lead'}
             label={'Ditno'}
             description={
-              'Discover how I lead the BIG W mobile app team. Here’s some more copy discussing how great I am without sounding to up myself.'
+              'I lead multiple engagements of frontend work with a cyber security startup that services clients in law, finance and healthcare industries.'
             }
           />
 
           <WorkTile
             overline={'Technical Lead'}
             label={'Vocul'}
-            description={
-              'Discover how I lead the BIG W mobile app team. Here’s some more copy discussing how great I am without sounding to up myself.'
-            }
+            description={`I lead one of Australia's hottest startups to create a recruitment platform that brings personality to job descriptions and brands.`}
           />
 
           <WorkTile
             overline={'Senior Engineer'}
             label={'BIG W Website'}
-            description={
-              'Discover how I lead the BIG W mobile app team. Here’s some more copy discussing how great I am without sounding to up myself.'
-            }
+            description={`I worked in a senior position with the BIG W website team to create a storefront for one of Australia's largest ecommerce retailers.`}
           />
+        </div>
+
+        <div id={'resume'}>
+          <p>Want to learn more?</p>
+          <button type={'button'}>Download CV</button>
+
         </div>
 
         <div id={'contact'}>
