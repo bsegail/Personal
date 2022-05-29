@@ -2,7 +2,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-column-gap: 24px;
   grid-row-gap: 24px;
 
@@ -13,4 +13,40 @@
 
 .main {
   @include container;
+}
+
+.openingText {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 96px;
+  margin-top: 24px;
+
+  //min-height: calc(100vh - #{$header-height});
+}
+
+.title {
+  //font-size: 36px;
+}
+
+.underline {
+  //font-size: 24px;
+}
+
+.opening {
+  //font-size: 36px;
+}
+
+.work {
+  //font-size: 64px;
+}
+
+.contact {
+  margin-top: 96px;
+}
+
+.chevronDown {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
 }

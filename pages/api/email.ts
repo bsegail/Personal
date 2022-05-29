@@ -6,7 +6,6 @@ if (process.env.SENDGRID_API_KEY) {
 }
 
 export default async function email(req: NextApiRequest, res: NextApiResponse) {
-  console.log(req.method)
   if (req.method === 'POST') {
     const { name, email: emailMessage, message } = req.body
     const msg = {

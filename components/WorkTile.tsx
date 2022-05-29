@@ -8,9 +8,14 @@ const WorkTile: React.FC<{
 }> = ({ overline, label, description }) => {
   return (
     <div className={styles.container}>
-      <p className={styles.overline}>{overline}</p>
-      <h3 className={styles.label}>{label}</h3>
-      <p className={styles.description}>{description}</p>
+      <div className={styles.textContainer}>
+        <p className={styles.overline}>{overline}</p>
+        <h3 className={styles.label}>{label}</h3>
+        <p className={styles.description}>{description}</p>
+      </div>
+      {/*<div className={styles.imageContainer}>*/}
+      {/*  <Image alt="" src={'/bigw-mobile.png'} width={422} height={300} />*/}
+      {/*</div>*/}
     </div>
   )
 }

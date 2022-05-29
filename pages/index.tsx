@@ -23,11 +23,7 @@ const schema = yup
 const Home: NextPage = () => {
   const [formShown, setFormShown] = useState(true)
   const [formMessage, setFormMessage] = useState<string | null>(null)
-  const {
-    handleSubmit,
-    register,
-    formState: { errors },
-  } = useForm<{ name: string; email: string; message: string }>({
+  const { handleSubmit, register } = useForm<{ name: string; email: string; message: string }>({
     resolver: yupResolver(schema),
   })
 
@@ -40,10 +36,11 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Bailey Segail | Senior Engineer</title>
+        <title>Bailey Segail | Technical Lead</title>
         <meta
           name="description"
-          content="I'm a senior engineer that leads teams to create intentional digital products"
+          content="I’m a purpose driven, senior engineer that leads teams and aligns business goals, project outcomes, and user
+          needs when creating digital products."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -51,15 +48,23 @@ const Home: NextPage = () => {
       <Header />
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Bailey Segail</h1>
-        <p>Senior engineer that leads teams to create intentional digital products</p>
+        <div className={styles.openingText}>
+          <h1 className={styles.title}>Bailey Segail</h1>
+          <p className={styles.underline}>Senior engineer that leads teams to create intentional digital products</p>
 
-        <p>
-          I’m a purpose driven, senior engineer that leads teams and aligns business goals, project outcomes, and user
-          needs when creating digital products.
-        </p>
+          <p className={styles.opening}>
+            I’m a purpose driven, senior engineer that leads teams and aligns <u>business goals</u>,{' '}
+            <u>project outcomes</u>, and <u>user needs</u> when creating digital products.
+          </p>
 
-        <h1>Work</h1>
+          {/*<div className={styles.chevronDown}>*/}
+          {/*  <motion.div animate={{ y: [0, -12, 0] }} transition={{ repeat: Infinity, duration: 2.5 }}>*/}
+          {/*    <ChevronDown />*/}
+          {/*  </motion.div>*/}
+          {/*</div>*/}
+        </div>
+
+        <h2 className={styles.work}>Work</h2>
         <div className={styles.grid}>
           <WorkTile
             overline={'Technical Lead'}
@@ -93,8 +98,8 @@ const Home: NextPage = () => {
         {/*  <Button label={'Download CV'} />*/}
         {/*</div>*/}
 
-        <div id={'contact'}>
-          <h1>Contact</h1>
+        <div id={'contact'} className={styles.contact}>
+          <h2>Contact</h2>
           {formShown ? (
             <form onSubmit={handleSubmit(submit)}>
               <Field {...register('name')} label={'Name'} />
