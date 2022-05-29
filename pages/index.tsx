@@ -5,8 +5,38 @@ import WorkTile from '../components/WorkTile'
 import Field from '../components/Field'
 import Header from '../components/Header'
 import Button from '../components/Button'
+import { useForm } from 'react-hook-form'
+import axios from 'axios'
+import { yupResolver } from '@hookform/resolvers/yup'
+import * as yup from 'yup'
+import useAsyncFn from 'react-use/lib/useAsyncFn'
+import { useState } from 'react'
+
+const schema = yup
+  .object({
+    name: yup.string().required('Name is a required field'),
+    email: yup.string().required('Email is a required field'),
+    message: yup.string().required('Message is a required field'),
+  })
+  .required()
 
 const Home: NextPage = () => {
+  const [formShown, setFormShown] = useState(true)
+  const [formMessage, setFormMessage] = useState<string | null>(null)
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm<{ name: string; email: string; message: string }>({
+    resolver: yupResolver(schema),
+  })
+
+  const [{ loading }, submit] = useAsyncFn(async ({ name, email, message }: any) => {
+    await axios.post('/api/email', { name, email, message })
+    setFormShown(false)
+    setFormMessage('Your message has been sent')
+  }, [])
+
   return (
     <div>
       <Head>
@@ -58,19 +88,27 @@ const Home: NextPage = () => {
           />
         </div>
 
-        <div id={'resume'}>
-          <p>Want to learn more?</p>
-          <Button label={'Download CV'} />
-        </div>
+        {/*<div id={'resume'}>*/}
+        {/*  <p>Want to learn more?</p>*/}
+        {/*  <Button label={'Download CV'} />*/}
+        {/*</div>*/}
 
         <div id={'contact'}>
           <h1>Contact</h1>
-          <form>
-            <Field name={'name'} label={'Name'} />
-            <Field name={'email'} label={'Email'} type={'email'} />
-            <Field name={'message'} label={'Message'} type={'textarea'} />
-            <Button type={'submit'} label={'Send'} />
-          </form>
+          {formShown ? (
+            <form onSubmit={handleSubmit(submit)}>
+              <Field {...register('name')} label={'Name'} />
+              <Field {...register('email')} label={'Email'} type={'email'} />
+              <Field {...register('message')} label={'Message'} type={'textarea'} />
+              <Button type={'submit'} label={'Send'} isSubmitting={loading} />
+            </form>
+          ) : null}
+
+          {formMessage ? (
+            <div>
+              <p>{formMessage}</p>
+            </div>
+          ) : null}
         </div>
       </main>
     </div>

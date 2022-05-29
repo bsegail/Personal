@@ -8,7 +8,7 @@ const Header: React.FC = () => {
       <Logo />
       <nav>
         <ul className={styles.list}>
-          <li>Resume</li>
+          {/*<li>Resume</li>*/}
           <li><a href={'#contact'}>Contact</a></li>
         </ul>
       </nav>
