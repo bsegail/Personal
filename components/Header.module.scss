@@ -1,7 +1,11 @@
+@import '../styles/imports';
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include container;
 }
 
 .list {

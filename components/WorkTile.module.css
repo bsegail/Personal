@@ -1,15 +1,18 @@
 .container {
-
+    background: var(--elevate);
+    padding: 24px;
 }
 
 .overline {
-
+    margin-bottom: 0;
 }
 
 .label {
-
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .description {
-
+    margin-top: 0;
+    margin-bottom: 0;
 }

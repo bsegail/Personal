@@ -1,13 +1,14 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 import WorkTile from '../components/WorkTile'
 import Field from '../components/Field'
 import Header from '../components/Header'
+import Button from '../components/Button'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Bailey Segail | Senior Engineer</title>
         <meta
@@ -24,8 +25,8 @@ const Home: NextPage = () => {
         <p>Senior engineer that leads teams to create intentional digital products</p>
 
         <p>
-          I’m a senior engineer that leads teams and has a deep understanding of aligning business goals, project
-          outcomes, and user needs when creating digital products.
+          I’m a purpose driven, senior engineer that leads teams and aligns business goals, project outcomes, and user
+          needs when creating digital products.
         </p>
 
         <h1>Work</h1>
@@ -59,8 +60,7 @@ const Home: NextPage = () => {
 
         <div id={'resume'}>
           <p>Want to learn more?</p>
-          <button type={'button'}>Download CV</button>
-
+          <Button label={'Download CV'} />
         </div>
 
         <div id={'contact'}>
@@ -69,7 +69,7 @@ const Home: NextPage = () => {
             <Field name={'name'} label={'Name'} />
             <Field name={'email'} label={'Email'} type={'email'} />
             <Field name={'message'} label={'Message'} type={'textarea'} />
-            <button type={'submit'}>Send</button>
+            <Button type={'submit'} label={'Send'} />
           </form>
         </div>
       </main>
