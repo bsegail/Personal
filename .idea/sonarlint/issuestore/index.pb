@@ -5,10 +5,6 @@
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 >
 .eslintrc.json,7/1/71c20a341bfe32aa5cd5b4384e94f942bab6a7d3
-C
-components/Logo.tsx,d/2/d20ba3a8a37d647cbdc1bd4e32344115bb0e294e
-M
-components/Button.module.scss,f/3/f3e483412d1276d3fb9572602ecc183910fb7f9f
 4
 .env,3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
 E
@@ -25,3 +21,13 @@ K
 	yarn.lock,5/3/53585a096fe3a3b96321113856ae62602995a33b
 B
 pages/api/email.ts,7/9/799037759963c020636e635f760588a755bebcf3
+B
+styles/mixins.scss,8/1/81fedfd4510d353e98668a31030b143979587f9d
+C
+styles/imports.scss,2/1/21dcecd63d468bb56a432448d6d93c73f53a3405
+J
+components/Logo.module.css,a/4/a40217f2154d3b4e51503c3aaddbac2740f1f59f
+>
+pages/_app.tsx,5/5/550528cc072fa7d76d123e2f4303d4ab39daa8e8
+D
+styles/variables.css,0/4/04a5d045e822ea9c05805c28f3736ad2c7c28db0

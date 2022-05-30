@@ -58,12 +58,6 @@ const Home: NextPage = () => {
             I love building and scaling MVPs, and have a track record of delivering web and mobile projects for
             startups, enterprises and non-profits.
           </p>
-
-          {/*<div className={styles.chevronDown}>*/}
-          {/*  <motion.div animate={{ y: [0, -12, 0] }} transition={{ repeat: Infinity, duration: 2.5 }}>*/}
-          {/*    <ChevronDown />*/}
-          {/*  </motion.div>*/}
-          {/*</div>*/}
         </div>
 
         <h2 className={styles.work}>Projects</h2>
@@ -71,7 +65,7 @@ const Home: NextPage = () => {
           <WorkTile
             overline={'Technical Lead'}
             label={'BIG W Mobile App'}
-            description={`I lead the BIG W mobile app team and created an ecommerce app for one of Australia's largest retailers.`}
+            description={`I led the BIG W mobile app team and created an ecommerce app for one of Australia's largest retailers.`}
             imagePath={'/images/work-tiles/bigw-mobile.jpeg'}
           />
 
@@ -79,7 +73,7 @@ const Home: NextPage = () => {
             overline={'Technical Lead'}
             label={'Ditno'}
             description={
-              'I lead multiple engagements of frontend work with a cyber security startup that services clients in law, finance and healthcare industries.'
+              'I led multiple engagements of frontend work with a cyber security startup that services clients in law, finance and healthcare industries.'
             }
             imagePath={'/images/work-tiles/ditno.jpeg'}
           />
@@ -87,7 +81,7 @@ const Home: NextPage = () => {
           <WorkTile
             overline={'Technical Lead'}
             label={'Vocul'}
-            description={`I lead one of Australia's hottest startups to create a recruitment platform that brings personality to job descriptions and brands.`}
+            description={`I led one of Australia's hottest startups to create a recruitment platform that brings personality to job descriptions and brands.`}
             imagePath={'/images/work-tiles/vocul.jpeg'}
           />
 
@@ -98,11 +92,6 @@ const Home: NextPage = () => {
             imagePath={'/images/work-tiles/bigw-website.jpeg'}
           />
         </div>
-
-        {/*<div id={'resume'}>*/}
-        {/*  <p>Want to learn more?</p>*/}
-        {/*  <Button label={'Download CV'} />*/}
-        {/*</div>*/}
 
         <div id={'contact'} className={styles.contact}>
           <h2>Contact</h2>

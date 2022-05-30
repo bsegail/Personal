@@ -14,9 +14,11 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+
   li {
     color: #666666;
     font-size: 14px;
+    text-transform: uppercase;
 
     &:not(:last-of-type) {
       margin-right: 8px;
