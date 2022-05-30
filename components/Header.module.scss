@@ -6,16 +6,21 @@
   align-items: center;
   justify-content: space-between;
   height: $header-height;
-  border-bottom: 1px solid #cdcdcd;
+  border-bottom: 1px solid #cccccc;
 }
 
 .list {
   display: flex;
   list-style-type: none;
-
+  margin: 0;
+  padding: 0;
   li {
+    color: #666666;
+    font-size: 14px;
+
     &:not(:last-of-type) {
       margin-right: 8px;
+
     }
   }
 }

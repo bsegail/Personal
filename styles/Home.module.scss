@@ -2,11 +2,11 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-column-gap: 24px;
   grid-row-gap: 24px;
 
-  @media(max-width: 768px) {
+  @media(max-width: 550px) {
     grid-template-columns: 1fr;
   }
 }
@@ -33,11 +33,11 @@
 }
 
 .opening {
-  //font-size: 36px;
+  max-width: 768px;
 }
 
 .work {
-  //font-size: 64px;
+  font-size: 32px;
 }
 
 .contact {

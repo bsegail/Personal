@@ -6,6 +6,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: var(--text);
   scroll-behavior: smooth;
+  margin-bottom: 48px;
 }
 
 a {
@@ -23,8 +24,7 @@ input, textarea {
   font-size: 16px;
   background: var(--elevate);
   border-radius: 4px;
-  border-width: 1px;
-  border-color: var(--text);
+  border: 1px solid #cccccc;
   padding: 8px 8px;
 }
 

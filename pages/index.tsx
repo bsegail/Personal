@@ -50,11 +50,13 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <div className={styles.openingText}>
           <h1 className={styles.title}>Bailey Segail</h1>
-          <p className={styles.underline}>Senior engineer that leads teams to create intentional digital products</p>
-
           <p className={styles.opening}>
-            I’m a purpose driven, senior engineer that leads teams and aligns <u>business goals</u>,{' '}
-            <u>project outcomes</u>, and <u>user needs</u> when creating digital products.
+            I’m a purpose driven, senior engineer that leads teams and aligns business goals, project outcomes, and user
+            needs when creating digital products.
+          </p>
+          <p className={styles.opening}>
+            I love building and scaling MVPs, and have a track record of delivering web and mobile projects for
+            startups, enterprises and non-profits.
           </p>
 
           {/*<div className={styles.chevronDown}>*/}
@@ -64,12 +66,13 @@ const Home: NextPage = () => {
           {/*</div>*/}
         </div>
 
-        <h2 className={styles.work}>Work</h2>
+        <h2 className={styles.work}>Projects</h2>
         <div className={styles.grid}>
           <WorkTile
             overline={'Technical Lead'}
             label={'BIG W Mobile App'}
             description={`I lead the BIG W mobile app team and created an ecommerce app for one of Australia's largest retailers.`}
+            imagePath={'/images/work-tiles/bigw-mobile.jpeg'}
           />
 
           <WorkTile
@@ -78,18 +81,21 @@ const Home: NextPage = () => {
             description={
               'I lead multiple engagements of frontend work with a cyber security startup that services clients in law, finance and healthcare industries.'
             }
+            imagePath={'/images/work-tiles/ditno.jpeg'}
           />
 
           <WorkTile
             overline={'Technical Lead'}
             label={'Vocul'}
             description={`I lead one of Australia's hottest startups to create a recruitment platform that brings personality to job descriptions and brands.`}
+            imagePath={'/images/work-tiles/vocul.jpeg'}
           />
 
           <WorkTile
             overline={'Senior Engineer'}
             label={'BIG W Website'}
             description={`I worked in a senior position with the BIG W website team to create a storefront for one of Australia's largest ecommerce retailers.`}
+            imagePath={'/images/work-tiles/bigw-website.jpeg'}
           />
         </div>
 
