@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-between;
   height: $header-height;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #666666;
 }
 
 .list {
@@ -17,7 +17,7 @@
 
   li {
     color: #666666;
-    font-size: 14px;
+    font-size: 16px;
     text-transform: uppercase;
 
     &:not(:last-of-type) {

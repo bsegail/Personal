@@ -15,25 +15,50 @@
   @include container;
 }
 
-.openingText {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 96px;
-  margin-top: 24px;
-
-  //min-height: calc(100vh - #{$header-height});
-}
-
-.title {
-  //font-size: 36px;
-}
-
-.underline {
-  //font-size: 24px;
-}
-
 .opening {
-  max-width: 768px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 96px;
+  margin-top: 64px;
+
+  .openingText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 552px;
+    width: 100%;
+    margin-right: 48px;
+  }
+
+  .openingImage {
+
+  }
+
+  .title {
+    //font-size: 36px;
+  }
+
+  .underline {
+    //font-size: 24px;
+  }
+
+  @media (max-width: 1024px) {
+    .openingText {
+      max-width: 402px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+
+    .openingText {
+      max-width: 552px;
+    }
+    .openingImage {
+      display: none;
+    }
+  }
 }
 
 .work {

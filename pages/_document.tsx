@@ -6,13 +6,13 @@ class Document extends NextDocument {
       <Html>
         <Head>
           <link
-            href='https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=optional'
-            rel='stylesheet'
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
+            rel="stylesheet"
           />
         </Head>
         <body>
-        <Main />
-        <NextScript />
+          <Main />
+          <NextScript />
         </body>
       </Html>
     )

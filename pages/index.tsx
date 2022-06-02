@@ -11,6 +11,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import useAsyncFn from 'react-use/lib/useAsyncFn'
 import { useState } from 'react'
+import Image from 'next/image'
 
 const schema = yup
   .object({
@@ -48,18 +49,21 @@ const Home: NextPage = () => {
       <Header />
 
       <main className={styles.main}>
-        <div className={styles.openingText}>
-          <h1 className={styles.title}>Bailey Segail</h1>
-          <p className={styles.opening}>
-            I’m a purpose driven, senior engineer that leads teams and aligns business goals, project outcomes, and user
-            needs when creating digital products.
-          </p>
-          <p className={styles.opening}>
-            I love building and scaling MVPs, and have a track record of delivering web and mobile projects for
-            startups, enterprises and non-profits.
-          </p>
+        <div className={styles.opening}>
+          <div className={styles.openingText}>
+            <h1 className={styles.title}>Bailey Segail</h1>
+            <p>
+              I’m a purpose driven, senior engineer that leads teams and aligns business goals, project outcomes, and
+              user needs when creating digital products.
+            </p>
+            <p>
+              I love building and scaling MVPs, and have a track record of delivering web and mobile projects for
+              startups, enterprises and non-profits.
+            </p>
+            <a href={'#contact'}><Button label={'Contact'} variant={'secondary'} /></a>
+          </div>
+          <div className={styles.openingImage}><Image alt="Developer image" src={'/images/illustrations/developer.svg'} width={408} height={348} /></div>
         </div>
-
         <h2 className={styles.work}>Projects</h2>
         <div className={styles.grid}>
           <WorkTile

@@ -5,7 +5,8 @@ const Button: React.FC<{
   label: string
   type?: React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>['type']
   isSubmitting?: boolean
-}> = ({ label, type = 'button', isSubmitting }) => {
+  variant?: 'primary' | 'secondary'
+}> = ({ label, type = 'button', isSubmitting, variant = 'primary' }) => {
   return (
     <button type={type} className={styles.button}>
       {label}
