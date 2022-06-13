@@ -20,7 +20,7 @@ export default async function email(req: NextApiRequest, res: NextApiResponse) {
       await sgMail.send(msg)
       return res.status(200).send(200)
     } catch (e) {
-      console.error(e)
+      console.error((e as any)?.response?.body)
       return res.status(500).send(500)
     }
   }

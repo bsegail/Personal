@@ -14,6 +14,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import FeaturedWorkTile from '../components/FeaturedWorkTile'
 import DownloadApp from '../components/DownloadApp'
+
 const schema = yup
   .object({
     name: yup.string().required('Name is a required field'),
@@ -44,7 +45,10 @@ const Home: NextPage = () => {
           content="I’m a purpose driven, senior engineer that leads teams and aligns business goals, project outcomes, and user
           needs when creating digital products."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
       </Head>
 
       <Header />
@@ -103,14 +107,13 @@ const Home: NextPage = () => {
             description={`I worked in a senior position with the BIG W website team to create a storefront for one of Australia's largest ecommerce retailers.`}
             imagePath={'/images/work-tiles/bigw-website.jpeg'}
             caseStudyLink={'https://www.upgrowth.com.au/case-study/big-w/website'}
-
           />
         </div>
 
         <div id={'contact'} className={styles.contact}>
           <div className={styles.contactOpening}>
-          <h2>Contact</h2>
-          <p>Want to have a chat? Fill out the form below.</p>
+            <h2>Contact</h2>
+            <p>Want to have a chat? Fill out the form below.</p>
           </div>
           {formShown ? (
             <form onSubmit={handleSubmit(submit)}>
