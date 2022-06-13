@@ -1,16 +1,31 @@
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "text image";
+  grid-column-gap: 24px;
   border-radius: 2px;
   border: 1px solid #666666;
   overflow: hidden;
   min-height: 375px;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-areas: "image"
+                          "text";
+  }
 }
 
 .textContainer {
   padding: 64px;
   margin-bottom: 24px;
   max-width: 528px;
+  grid-area: text;
+
+  @media (max-width: 1024px) {
+    padding: 32px;
+    margin-bottom: 48px;
+  }
 }
 
 .overline {
@@ -47,4 +62,10 @@
   position: relative;
   max-width: 528px;
   width: 100%;
+  grid-area: image;
+
+  @media (max-width: 768px) {
+    max-width: none;
+    min-height: 256px;
+  }
 }

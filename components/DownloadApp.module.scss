@@ -16,9 +16,22 @@
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+
+  @media (max-width: 550px) {
+    display: flex;
+    flex-direction: column;
+    top: 36px;
+    padding: 16px 24px;
+  }
 }
 
 .image {
   display: flex;
   align-self: center;
+
+  @media (max-width: 550px) {
+    &:first-child {
+      margin-bottom: 24px;
+    }
+  }
 }

@@ -5,7 +5,7 @@
 }
 
 .textContainer {
-    padding: 16px;
+    padding: 24px;
 }
 
 .overline {
@@ -23,6 +23,16 @@
 
 .description {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 12px;
     font-size: 16px;
+}
+
+.caseStudy {
+    display: flex;
+    align-items: center;
+
+}
+
+.externalLink {
+    margin-left: 8px;
 }

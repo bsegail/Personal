@@ -1,4 +1,6 @@
 .button {
+  display: flex;
+  align-items: center;
   padding: 8px 16px;
   background-color: var(--text);
   border: none;
@@ -19,4 +21,8 @@
   }
 
 
+}
+
+.buttonLoading {
+  margin-right: 8px;
 }

@@ -87,6 +87,7 @@ const Home: NextPage = () => {
               'I led multiple engagements of frontend work with a cyber security startup that services clients in law, finance and healthcare industries.'
             }
             imagePath={'/images/work-tiles/ditno.jpeg'}
+            caseStudyLink={'https://www.upgrowth.com.au/case-study/ditno-2-0'}
           />
 
           {/*<WorkTile*/}
@@ -101,17 +102,22 @@ const Home: NextPage = () => {
             label={'BIG W Website'}
             description={`I worked in a senior position with the BIG W website team to create a storefront for one of Australia's largest ecommerce retailers.`}
             imagePath={'/images/work-tiles/bigw-website.jpeg'}
+            caseStudyLink={'https://www.upgrowth.com.au/case-study/big-w/website'}
+
           />
         </div>
 
         <div id={'contact'} className={styles.contact}>
+          <div className={styles.contactOpening}>
           <h2>Contact</h2>
+          <p>Want to have a chat? Fill out the form below.</p>
+          </div>
           {formShown ? (
             <form onSubmit={handleSubmit(submit)}>
               <Field {...register('name')} label={'Name'} />
               <Field {...register('email')} label={'Email'} type={'email'} />
               <Field {...register('message')} label={'Message'} type={'textarea'} />
-              <Button type={'submit'} label={'Send'} isSubmitting={loading} />
+              <Button type={'submit'} label={'Send'} isSubmitting={loading} className={styles.contactButton} />
             </form>
           ) : null}
 

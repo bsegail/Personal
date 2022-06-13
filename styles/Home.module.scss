@@ -66,7 +66,17 @@
 }
 
 .contact {
-  margin-top: 96px;
+  max-width: 768px;
+  margin: 96px auto;
+
+  .contactOpening {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .contactButton {
+    margin: 0 auto;
+  }
 }
 
 .chevronDown {

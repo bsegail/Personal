@@ -11,10 +11,6 @@ D
 components/Field.tsx,c/5/c5d38e81d94bc82f44986ff46ec2a900c392129c
 K
 components/Field.module.css,5/0/50ed1dc66fa965a372f76ce12d658185d771f112
-<
-package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
-9
-	yarn.lock,5/3/53585a096fe3a3b96321113856ae62602995a33b
 B
 pages/api/email.ts,7/9/799037759963c020636e635f760588a755bebcf3
 E
@@ -23,7 +19,5 @@ J
 components/Logo.module.css,a/4/a40217f2154d3b4e51503c3aaddbac2740f1f59f
 C
 components/Logo.tsx,d/2/d20ba3a8a37d647cbdc1bd4e32344115bb0e294e
-B
-styles/mixins.scss,8/1/81fedfd4510d353e98668a31030b143979587f9d
 D
 styles/variables.css,0/4/04a5d045e822ea9c05805c28f3736ad2c7c28db0
