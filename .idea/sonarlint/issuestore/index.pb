@@ -17,10 +17,6 @@ K
 	yarn.lock,5/3/53585a096fe3a3b96321113856ae62602995a33b
 B
 pages/api/email.ts,7/9/799037759963c020636e635f760588a755bebcf3
-G
-components/WorkTile.tsx,1/c/1cded6c6d7eb7be12646a3144469e76a91e288b1
-N
-components/WorkTile.module.css,0/0/0071a2d46a1ba0bd6d80fa55c231e3c3b0703185
 E
 components/Header.tsx,3/6/36aef25bb01676aa8d3d032efb640f83d1b3a3e9
 J

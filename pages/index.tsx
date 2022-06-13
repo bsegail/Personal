@@ -12,7 +12,8 @@ import * as yup from 'yup'
 import useAsyncFn from 'react-use/lib/useAsyncFn'
 import { useState } from 'react'
 import Image from 'next/image'
-
+import FeaturedWorkTile from '../components/FeaturedWorkTile'
+import DownloadApp from '../components/DownloadApp'
 const schema = yup
   .object({
     name: yup.string().required('Name is a required field'),
@@ -60,19 +61,25 @@ const Home: NextPage = () => {
               I love building and scaling MVPs, and have a track record of delivering web and mobile projects for
               startups, enterprises and non-profits.
             </p>
-            <a href={'#contact'}><Button label={'Contact'} variant={'secondary'} /></a>
+            <a href={'#contact'}>
+              <Button label={'Contact'} variant={'secondary'} />
+            </a>
           </div>
-          <div className={styles.openingImage}><Image alt="Developer image" src={'/images/illustrations/developer.svg'} width={408} height={348} /></div>
+          <div className={styles.openingImage}>
+            <Image alt="Developer image" src={'/images/illustrations/developer.svg'} width={408} height={348} />
+          </div>
         </div>
         <h2 className={styles.work}>Projects</h2>
-        <div className={styles.grid}>
-          <WorkTile
-            overline={'Technical Lead'}
-            label={'BIG W Mobile App'}
-            description={`I led the BIG W mobile app team and created an ecommerce app for one of Australia's largest retailers.`}
-            imagePath={'/images/work-tiles/bigw-mobile.jpeg'}
-          />
 
+        <FeaturedWorkTile
+          overline={'Technical Lead'}
+          label={'BIG W Mobile App'}
+          description={`I led the BIG W mobile app team and created an ecommerce app for one of Australia's largest retailers.`}
+          imagePath={'/images/work-tiles/bigw-mobile.jpeg'}
+        />
+        <DownloadApp />
+
+        <div className={styles.grid}>
           <WorkTile
             overline={'Technical Lead'}
             label={'Ditno'}
@@ -82,12 +89,12 @@ const Home: NextPage = () => {
             imagePath={'/images/work-tiles/ditno.jpeg'}
           />
 
-          <WorkTile
-            overline={'Technical Lead'}
-            label={'Vocul'}
-            description={`I led one of Australia's hottest startups to create a recruitment platform that brings personality to job descriptions and brands.`}
-            imagePath={'/images/work-tiles/vocul.jpeg'}
-          />
+          {/*<WorkTile*/}
+          {/*  overline={'Technical Lead'}*/}
+          {/*  label={'Vocul'}*/}
+          {/*  description={`I led one of Australia's hottest startups to create a recruitment platform that brings personality to job descriptions and brands.`}*/}
+          {/*  imagePath={'/images/work-tiles/vocul.jpeg'}*/}
+          {/*/>*/}
 
           <WorkTile
             overline={'Senior Engineer'}

@@ -22,7 +22,10 @@
 
     &:not(:last-of-type) {
       margin-right: 8px;
+    }
 
+    a {
+      color: #666666;
     }
   }
 }
