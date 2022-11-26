@@ -58,12 +58,11 @@ const Home: NextPage = () => {
           <div className={styles.openingText}>
             <h1 className={styles.title}>Bailey Segail</h1>
             <p>
-              I&apos;m a purpose driven, senior engineer that leads teams and aligns business goals, project outcomes, and
+              I&apos;m a highly pragmatic senior engineer that leads teams and aligns business goals, project outcomes, and
               user needs when creating digital products.
             </p>
             <p>
-              I love building and scaling MVPs. I have a strong passion for user experience design, and enjoy finding the balance
-              between design and engineering.
+              I love building and scaling MVPs, and I have a strong passion for purposeful design and how it impacts digital products.
             </p>
             <div className={styles.openingButtons}>
               <a href={'/documents/Bailey_Segail_20221126.pdf'} target={'_blank'} rel="noreferrer">

@@ -15,10 +15,6 @@ C
 components/Logo.tsx,d/2/d20ba3a8a37d647cbdc1bd4e32344115bb0e294e
 >
 next.config.js,8/1/811a6d5a2e04fadb44d8eec365f2fa8af5c4facf
-C
-pages/_document.tsx,a/d/ada43e48670fd1ae7318859ac38479e031ea9236
-C
-styles/globals.scss,f/c/fc1cf7dab6c0bfb446668fc7d76de54e84466829
 [
 +public/images/download-on-the-app-store.svg,e/b/eb3e15b052cdb826f9be70d67dabd1aebf86ba1f
 :
