@@ -58,16 +58,21 @@ const Home: NextPage = () => {
           <div className={styles.openingText}>
             <h1 className={styles.title}>Bailey Segail</h1>
             <p>
-              I’m a purpose driven, senior engineer that leads teams and aligns business goals, project outcomes, and
+              I&apos;m a purpose driven, senior engineer that leads teams and aligns business goals, project outcomes, and
               user needs when creating digital products.
             </p>
             <p>
-              I love building and scaling MVPs, and have a track record of delivering web and mobile projects for
-              startups, enterprises and non-profits.
+              I love building and scaling MVPs. I have a strong passion for user experience design, and enjoy finding the balance
+              between design and engineering.
             </p>
-            <a href={'#contact'}>
-              <Button label={'Contact'} variant={'secondary'} />
-            </a>
+            <div className={styles.openingButtons}>
+              <a href={'/documents/Bailey_Segail_20221126.pdf'} target={'_blank'} rel="noreferrer">
+                <Button label={'Download CV'} variant={'primary'} />
+              </a>
+              <a href={'#contact'}>
+                <Button label={'Contact'} variant={'secondary'} />
+              </a>
+            </div>
           </div>
           <div className={styles.openingImage}>
             <Image alt="Developer image" src={'/images/illustrations/developer.svg'} width={408} height={348} />
@@ -110,6 +115,14 @@ const Home: NextPage = () => {
           />
         </div>
 
+        <div className={styles.cvSection}>
+          <h2>Download CV</h2>
+          <p>Want to learn more about my experience? Check out my CV by clicking the button below.</p>
+          <a href={'/documents/Bailey_Segail_20221126.pdf'} target={'_blank'} rel="noreferrer">
+            <Button label={'Download CV'} />
+          </a>
+        </div>
+
         <div id={'contact'} className={styles.contact}>
           <div className={styles.contactOpening}>
             <h2>Contact</h2>
@@ -125,7 +138,7 @@ const Home: NextPage = () => {
           ) : null}
 
           {formMessage ? (
-            <div>
+            <div className={styles.formMessage}>
               <p>{formMessage}</p>
             </div>
           ) : null}

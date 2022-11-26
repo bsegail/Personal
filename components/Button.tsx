@@ -11,7 +11,7 @@ const Button: React.FC<{
   className?: string
 }> = ({ label, type = 'button', isSubmitting, variant = 'primary', className }) => {
   return (
-    <button type={type} className={classNames(styles.button, className)}>
+    <button type={type} className={classNames(styles.button, styles[variant], className)}>
       {isSubmitting ? <div className={styles.buttonLoading}><Loading /></div> : null}
       {label}
     </button>

@@ -8,8 +8,14 @@ const Header: React.FC = () => {
       <Logo />
       <nav>
         <ul className={styles.list}>
-          {/*<li>Resume</li>*/}
-          <li><a href={'#contact'}>Contact</a></li>
+          <li>
+            <a href={'/documents/Bailey_Segail_20221126.pdf'} target={'_blank'} rel={'noreferrer'}>
+              Download CV
+            </a>
+          </li>
+          <li>
+            <a href={'#contact'}>Contact</a>
+          </li>
         </ul>
       </nav>
     </header>

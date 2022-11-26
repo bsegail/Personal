@@ -42,6 +42,14 @@
     //font-size: 24px;
   }
 
+  .openingButtons {
+    display: flex;
+
+    button:first-child {
+      margin-right: 16px;
+    }
+  }
+
   @media (max-width: 1024px) {
     .openingText {
       max-width: 402px;
@@ -84,4 +92,25 @@
   display: flex;
   justify-content: center;
   margin-bottom: 24px;
+}
+
+
+.cvSection {
+  max-width: 768px;
+  margin: 24px auto 0;
+
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--text);
+  text-align: center;
+  padding: 32px;
+
+  button {
+    margin: 12px auto;
+  }
+}
+
+
+.formMessage {
+  text-align: center;
 }
