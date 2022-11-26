@@ -14,6 +14,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import FeaturedWorkTile from '../components/FeaturedWorkTile'
 import DownloadApp from '../components/DownloadApp'
+import Footer from '../components/Footer'
 
 const schema = yup
   .object({
@@ -143,6 +144,8 @@ const Home: NextPage = () => {
           ) : null}
         </div>
       </main>
+
+      <Footer />
     </div>
   )
 }

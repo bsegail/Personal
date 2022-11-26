@@ -20,8 +20,6 @@ C
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-B
-styles/mixins.scss,8/1/81fedfd4510d353e98668a31030b143979587f9d
 J
 components/DownloadApp.tsx,b/f/bf2ab3ff9ab47461711b13aaeb2bfbd1c79e9d9a
 O
@@ -30,8 +28,6 @@ R
 "components/DownloadApp.module.scss,d/c/dcd99d3aa7940142bd61d543224da0e5f91051cd
 W
 'components/FeaturedWorkTile.module.scss,2/6/264962d5d541f787057c77689a0d6096fbb63cb3
-<
-package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
 N
 components/WorkTile.module.css,0/0/0071a2d46a1ba0bd6d80fa55c231e3c3b0703185
 9
