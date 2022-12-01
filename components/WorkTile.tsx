@@ -13,7 +13,7 @@ const WorkTile: React.FC<{
   return (
     <div className={styles.container}>
       <div className={styles.imageContainer}>
-        <Image alt="" src={image} width={526} height={290} placeholder={'blur'} />
+        <Image alt="" src={image} width={526} height={290} />
       </div>
       <div className={styles.textContainer}>
         <p className={styles.overline}>{overline}</p>

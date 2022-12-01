@@ -24,7 +24,7 @@ const FeaturedWorkTile: React.FC<{
         </a>
       </div>
       <div className={styles.imageContainer}>
-        <Image alt="" src={image} layout={'fill'} objectFit={'cover'} placeholder={'blur'} />
+        <Image alt="" src={image} layout={'fill'} objectFit={'cover'} />
       </div>
     </div>
   )
