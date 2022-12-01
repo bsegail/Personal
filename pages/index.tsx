@@ -16,6 +16,10 @@ import FeaturedWorkTile from '../components/FeaturedWorkTile'
 import DownloadApp from '../components/DownloadApp'
 import Footer from '../components/Footer'
 
+import bigwWebsite from '../public/images/work-tiles/bigw-website.jpeg'
+import bigwMobile from '../public/images/work-tiles/bigw-mobile.jpeg'
+import ditno from '../public/images/work-tiles/ditno.jpeg'
+
 const schema = yup
   .object({
     name: yup.string().required('Name is a required field'),
@@ -84,7 +88,7 @@ const Home: NextPage = () => {
           overline={'Technical Lead'}
           label={'BIG W Mobile App'}
           description={`I led the BIG W mobile app team and created an ecommerce app for one of Australia's largest retailers.`}
-          imagePath={'/images/work-tiles/bigw-mobile.jpeg'}
+          image={bigwMobile}
         />
         <DownloadApp />
 
@@ -95,22 +99,14 @@ const Home: NextPage = () => {
             description={
               'I led multiple engagements of frontend work with a cyber security startup that services clients in law, finance and healthcare industries.'
             }
-            imagePath={'/images/work-tiles/ditno.jpeg'}
+            image={ditno}
             caseStudyLink={'https://www.upgrowth.com.au/case-study/ditno-2-0'}
           />
-
-          {/*<WorkTile*/}
-          {/*  overline={'Technical Lead'}*/}
-          {/*  label={'Vocul'}*/}
-          {/*  description={`I led one of Australia's hottest startups to create a recruitment platform that brings personality to job descriptions and brands.`}*/}
-          {/*  imagePath={'/images/work-tiles/vocul.jpeg'}*/}
-          {/*/>*/}
-
           <WorkTile
             overline={'Senior Engineer'}
             label={'BIG W Website'}
             description={`I worked in a senior position with the BIG W website team to create a storefront for one of Australia's largest ecommerce retailers.`}
-            imagePath={'/images/work-tiles/bigw-website.jpeg'}
+            image={bigwWebsite}
             caseStudyLink={'https://www.upgrowth.com.au/case-study/big-w/website'}
           />
         </div>
