@@ -9,8 +9,8 @@ export default async function email(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     const { name, email: emailMessage, message } = req.body
     const msg = {
-      to: 'me@bsegail.com', // Change to your recipient
-      from: 'me@bsegail.com', // Change to your verified sender
+      to: 'bailey@bsegail.com', // Change to your recipient
+      from: 'bailey@bsegail.com', // Change to your verified sender
       subject: `New Message from ${name} ${emailMessage}`,
       text: message,
       html: `<p>Name: ${name}</p><p>Email: ${emailMessage}</p><p>${message}</p>`,
