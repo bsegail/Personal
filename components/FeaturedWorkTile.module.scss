@@ -3,11 +3,11 @@
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "text image";
   grid-column-gap: 24px;
-  border-radius: 2px;
-  border: 1px solid #666666;
+  border-radius: 8px;
   overflow: hidden;
   min-height: 375px;
   justify-content: space-between;
+  background-color: #f7f7f7;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -28,16 +28,18 @@
   }
 }
 
-.overline {
-  margin-top: 0;
-  font-size: 12px;
-  margin-bottom: 8px;
+.underline {
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+  margin-top: -0.5rem;
   text-transform: uppercase;
+  font-weight: 400;
 }
 
 .label {
   margin-top: 0;
-  font-size: 24px;
+  font-size: 2.25rem;
+  letter-spacing: -0.05em;
   margin-bottom: 8px;
 }
 
@@ -45,11 +47,13 @@
   margin-top: 0;
   margin-bottom: 12px;
   font-size: 16px;
+  font-weight: 500;
 }
 
 .caseStudy {
   display: flex;
   align-items: center;
+  margin-top: 1.5rem;
 
 }
 

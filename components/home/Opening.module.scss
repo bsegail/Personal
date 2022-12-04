@@ -1,0 +1,63 @@
+@import "styles/imports";
+.opening {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - #{$header-height});
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .openingText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 552px;
+    width: 100%;
+    margin-right: 48px;
+    font-size: 2rem;
+  }
+
+  .openingImage {
+    width: 408px;
+    height: 374px;
+  }
+
+  @media (max-width: 1024px) {
+    .openingText {
+      max-width: 402px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+
+    .openingText {
+      max-width: 552px;
+    }
+  }
+}
+
+
+.arrowButton {
+  display: flex;
+  align-items: center;
+
+  .icon {
+  }
+
+  p {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+
+  }
+}
+
+
+.superposition {
+  position: absolute;
+}

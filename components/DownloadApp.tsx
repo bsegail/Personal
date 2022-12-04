@@ -1,5 +1,5 @@
 import styles from './DownloadApp.module.scss'
-import Image from 'next/image'
+import Image from "next/legacy/image";
 import React from 'react'
 
 const DownloadApp: React.FC = () => {

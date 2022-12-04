@@ -1,11 +1,10 @@
 import styles from './Header.module.scss'
 import React from 'react'
-import Logo from './Logo'
 
 const Header: React.FC = () => {
   return (
     <header className={styles.header}>
-      <Logo />
+      <p className={styles.name}>Bailey Segail</p>
       <nav>
         <ul className={styles.list}>
           <li>

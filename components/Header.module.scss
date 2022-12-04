@@ -1,12 +1,25 @@
 @import '../styles/imports';
 
 .header {
-  @include container;
+  max-width: 1368px;
   display: flex;
+  margin: 0 auto;
+
   align-items: center;
   justify-content: space-between;
   height: $header-height;
-  border-bottom: 1px solid #666666;
+
+  @media(max-width: 1416px) {
+    margin: 0 24px;
+  }
+}
+
+.name {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  margin: 0;
+  font-size: 1.5rem;
 }
 
 .list {
@@ -17,7 +30,8 @@
 
   li {
     color: #666666;
-    font-size: 16px;
+    font-size: 1rem;
+    letter-spacing: -0.05em;
     text-transform: uppercase;
 
     &:not(:last-of-type) {

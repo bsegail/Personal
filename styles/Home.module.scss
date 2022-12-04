@@ -1,76 +1,12 @@
 @import './imports';
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 24px;
-  grid-row-gap: 24px;
-
-  @media(max-width: 550px) {
-    grid-template-columns: 1fr;
-  }
-}
-
 .main {
   @include container;
 }
 
-.opening {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 96px;
-  margin-top: 64px;
-
-  .openingText {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    max-width: 552px;
-    width: 100%;
-    margin-right: 48px;
-  }
-
-  .openingImage {
-
-  }
-
-  .title {
-    //font-size: 36px;
-  }
-
-  .underline {
-    //font-size: 24px;
-  }
-
-  .openingButtons {
-    display: flex;
-
-    button:first-child {
-      margin-right: 16px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    .openingText {
-      max-width: 402px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    flex-direction: column-reverse;
-    justify-content: flex-start;
-
-    .openingText {
-      max-width: 552px;
-    }
-    .openingImage {
-      display: none;
-    }
-  }
-}
-
-.work {
-  font-size: 32px;
+.tile {
+  margin-top: 24px;
+  margin-bottom: 48px;
 }
 
 .contact {
@@ -86,30 +22,6 @@
     margin: 0 auto;
   }
 }
-
-.chevronDown {
-  margin-top: auto;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 24px;
-}
-
-
-.cvSection {
-  max-width: 768px;
-  margin: 24px auto 0;
-
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--text);
-  text-align: center;
-  padding: 32px;
-
-  button {
-    margin: 12px auto;
-  }
-}
-
 
 .formMessage {
   text-align: center;

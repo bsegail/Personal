@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
-import WorkTile from '../components/WorkTile'
 import Field from '../components/Field'
 import Header from '../components/Header'
 import Button from '../components/Button'
@@ -11,7 +10,6 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import useAsyncFn from 'react-use/lib/useAsyncFn'
 import { useState } from 'react'
-import Image from 'next/image'
 import FeaturedWorkTile from '../components/FeaturedWorkTile'
 import DownloadApp from '../components/DownloadApp'
 import Footer from '../components/Footer'
@@ -19,6 +17,8 @@ import Footer from '../components/Footer'
 import bigwWebsite from '../public/images/work-tiles/bigw-website.jpeg'
 import bigwMobile from '../public/images/work-tiles/bigw-mobile.jpeg'
 import ditno from '../public/images/work-tiles/ditno.jpeg'
+import Opening from '../components/home/Opening'
+import { ArrowRightCircle } from 'react-feather'
 
 const schema = yup
   .object({
@@ -43,6 +43,7 @@ const Home: NextPage = () => {
 
   return (
     <div>
+      <Header />
       <Head>
         <title>Bailey Segail | Technical Lead</title>
         <meta
@@ -50,74 +51,42 @@ const Home: NextPage = () => {
           content="I’m a purpose driven, senior engineer that leads teams and aligns business goals, project outcomes, and user
           needs when creating digital products."
         />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
-        <link rel="manifest" href="/favicon/site.webmanifest" />
       </Head>
 
-      <Header />
-
       <main className={styles.main}>
-        <div className={styles.opening}>
-          <div className={styles.openingText}>
-            <h1 className={styles.title}>Bailey Segail</h1>
-            <p>
-              I&apos;m a highly pragmatic senior engineer that leads teams and aligns business goals, project outcomes, and
-              user needs when creating digital products.
-            </p>
-            <p>
-              I love building and scaling MVPs, and I have a strong passion for purposeful design and how it impacts digital products.
-            </p>
-            <div className={styles.openingButtons}>
-              <a href={'/documents/Bailey_Segail_20221126.pdf'} target={'_blank'} rel="noreferrer">
-                <Button label={'Download CV'} variant={'primary'} />
-              </a>
-              <a href={'#contact'}>
-                <Button label={'Contact'} variant={'secondary'} />
-              </a>
-            </div>
-          </div>
-          <div className={styles.openingImage}>
-            <Image alt="Developer image" src={'/images/illustrations/developer.svg'} width={408} height={348} />
-          </div>
-        </div>
-        <h2 className={styles.work}>Projects</h2>
+        <Opening />
 
         <FeaturedWorkTile
-          overline={'Technical Lead'}
+          underline={'Technical Lead'}
           label={'BIG W Mobile App'}
           description={`I led the BIG W mobile app team and created an ecommerce app for one of Australia's largest retailers.`}
           image={bigwMobile}
+          href={'https://www.upgrowth.com.au/case-study/big-w/mobile'}
         />
         <DownloadApp />
 
-        <div className={styles.grid}>
-          <WorkTile
-            overline={'Technical Lead'}
-            label={'Ditno'}
-            description={
-              'I led multiple engagements of frontend work with a cyber security startup that services clients in law, finance and healthcare industries.'
-            }
-            image={ditno}
-            caseStudyLink={'https://www.upgrowth.com.au/case-study/ditno-2-0'}
-          />
-          <WorkTile
-            overline={'Senior Engineer'}
-            label={'BIG W Website'}
-            description={`I worked in a senior position with the BIG W website team to create a storefront for one of Australia's largest ecommerce retailers.`}
-            image={bigwWebsite}
-            caseStudyLink={'https://www.upgrowth.com.au/case-study/big-w/website'}
-          />
-        </div>
+        <FeaturedWorkTile
+          underline={'Technical Lead'}
+          label={'Ditno'}
+          description={
+            'I led multiple engagements of frontend work with a cyber security startup that services clients in law, finance and healthcare industries.'
+          }
+          image={ditno}
+          href={'https://www.upgrowth.com.au/case-study/ditno-2-0'}
+          className={styles.tile}
+        />
+        <FeaturedWorkTile
+          underline={'Senior Engineer'}
+          label={'BIG W Website'}
+          description={`I worked in a senior position with the BIG W website team to create a storefront for one of Australia's largest ecommerce retailers.`}
+          image={bigwWebsite}
+          href={'https://www.upgrowth.com.au/case-study/big-w/website'}
+        />
 
-        <div className={styles.cvSection}>
-          <h2>Download CV</h2>
-          <p>Want to learn more about my experience? Check out my CV by clicking the button below.</p>
-          <a href={'/documents/Bailey_Segail_20221126.pdf'} target={'_blank'} rel="noreferrer">
-            <Button label={'Download CV'} />
-          </a>
-        </div>
+        <a href={'/documents/Bailey_Segail_20221126.pdf'} target={'_blank'} rel="noreferrer">
+          <p>Download my CV</p>
+          <ArrowRightCircle />
+        </a>
 
         <div id={'contact'} className={styles.contact}>
           <div className={styles.contactOpening}>

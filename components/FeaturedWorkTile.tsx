@@ -1,22 +1,25 @@
 import styles from './FeaturedWorkTile.module.scss'
 import React from 'react'
-import Image, { StaticImageData } from 'next/image'
+import Image, { StaticImageData } from "next/legacy/image";
 import { ExternalLink } from 'react-feather'
+import classNames from 'classnames'
 
 const FeaturedWorkTile: React.FC<{
-  overline: string
+  underline: string
   label: string
   description: string
   image: StaticImageData
-}> = ({ overline, label, description, image }) => {
+  href: string
+  className?: string
+}> = ({ underline, label, description, image, href, className }) => {
   return (
-    <div className={styles.container}>
+    <div className={classNames(styles.container, className)}>
       <div className={styles.textContainer}>
-        <p className={styles.overline}>{overline}</p>
         <h3 className={styles.label}>{label}</h3>
+        <p className={styles.underline}>{underline}</p>
         <p className={styles.description}>{description}</p>
 
-        <a href={'https://www.upgrowth.com.au/case-study/big-w/mobile'} target={'_blank'} rel={'noreferrer'}>
+        <a href={href} target={'_blank'} rel={'noreferrer'}>
           <div className={styles.caseStudy}>
             See case study
             <ExternalLink size={16} className={styles.externalLink} />

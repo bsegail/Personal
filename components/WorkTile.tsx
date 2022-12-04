@@ -1,6 +1,6 @@
 import styles from './WorkTile.module.css'
 import React from 'react'
-import Image, { StaticImageData } from 'next/image'
+import Image, { StaticImageData } from "next/legacy/image";
 import { ExternalLink } from 'react-feather'
 
 const WorkTile: React.FC<{
