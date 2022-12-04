@@ -23,6 +23,8 @@
   .openingImage {
     width: 408px;
     height: 374px;
+    //height: 600px;
+    position: relative;
   }
 
   @media (max-width: 1024px) {
@@ -52,7 +54,7 @@
   p {
     margin-bottom: 0;
     font-size: 1.5rem;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
 
   }
 }
