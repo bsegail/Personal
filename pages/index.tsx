@@ -22,9 +22,9 @@ import ditno from '../public/images/work-tiles/ditno.jpeg'
 
 const schema = yup
   .object({
-    name: yup.string().required('Name is a required field'),
-    email: yup.string().required('Email is a required field'),
-    message: yup.string().required('Message is a required field'),
+    name: yup.string().required('Name is a required field.'),
+    email: yup.string().required('Email is a required field.'),
+    message: yup.string().required('Message is a required field.'),
   })
   .required()
 
@@ -38,7 +38,7 @@ const Home: NextPage = () => {
   const [{ loading }, submit] = useAsyncFn(async ({ name, email, message }: any) => {
     await axios.post('/api/email', { name, email, message })
     setFormShown(false)
-    setFormMessage('Your message has been sent')
+    setFormMessage('Your message has been sent.')
   }, [])
 
   return (
