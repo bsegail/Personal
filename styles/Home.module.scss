@@ -5,8 +5,58 @@
 }
 
 .tile {
-  margin-top: 24px;
-  margin-bottom: 48px;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+}
+
+.arrowButton {
+  color: #333333;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+
+  .icon {
+  }
+
+  p {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+
+  }
+}
+
+.aboutMe {
+  display: flex;
+  justify-content: center;
+  margin-top: 12rem;
+  margin-bottom: 12rem;
+
+  .aboutMeImageContainer {
+    margin-right: 4rem;
+
+    .aboutMeImage {
+      border-radius: 8px;
+    }
+  }
+
+
+  .aboutMeText {
+    p {
+      font-size: 2rem;
+      line-height: 1.71;
+    }
+
+    .highlight {
+      color: #838190;
+      font-weight: 600;
+    }
+  }
 }
 
 .contact {

@@ -1,17 +1,17 @@
 @import '../styles/imports';
 
 .header {
-  max-width: 1368px;
+  width: 100%;
+}
+
+.container {
+  @include container;
   display: flex;
-  margin: 0 auto;
+  height: $header-height;
+
 
   align-items: center;
   justify-content: space-between;
-  height: $header-height;
-
-  @media(max-width: 1416px) {
-    margin: 0 24px;
-  }
 }
 
 .name {

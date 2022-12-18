@@ -13,12 +13,16 @@ import { useState } from 'react'
 import FeaturedWorkTile from '../components/FeaturedWorkTile'
 import DownloadApp from '../components/DownloadApp'
 import Footer from '../components/Footer'
+import { motion } from 'framer-motion'
 
 import bigwWebsite from '../public/images/work-tiles/bigw-website.jpeg'
 import bigwMobile from '../public/images/work-tiles/bigw-mobile.jpeg'
 import ditno from '../public/images/work-tiles/ditno.jpeg'
+import bailey from '../public/images/bailey.jpg'
 import Opening from '../components/home/Opening'
 import { ArrowRightCircle } from 'react-feather'
+import Link from 'next/link'
+import Image from 'next/image'
 
 const schema = yup
   .object({
@@ -41,6 +45,8 @@ const Home: NextPage = () => {
     setFormMessage('Your message has been sent.')
   }, [])
 
+  const [animateButton, setAnimateButton] = useState(false)
+
   return (
     <div>
       <Header />
@@ -53,7 +59,7 @@ const Home: NextPage = () => {
         />
       </Head>
 
-      <main className={styles.main}>
+      <div className={styles.main}>
         <Opening />
 
         <FeaturedWorkTile
@@ -83,10 +89,39 @@ const Home: NextPage = () => {
           href={'https://www.upgrowth.com.au/case-study/big-w/website'}
         />
 
-        <a href={'/documents/Bailey_Segail_20221126.pdf'} target={'_blank'} rel="noreferrer">
-          <p>Download my CV</p>
-          <ArrowRightCircle />
-        </a>
+        <Link
+          href={'/documents/Bailey_Segail_20221126.pdf'}
+          target={'_blank'}
+          rel="noreferrer"
+          className={styles.arrowButton}
+        >
+          <motion.div onHoverStart={() => setAnimateButton(true)} onHoverEnd={() => setAnimateButton(false)}>
+            <p>Download my CV</p>
+            <motion.div
+              animate={animateButton ? 'open' : 'closed'}
+              variants={{
+                closed: { x: 0 },
+                open: { x: 5 },
+              }}
+            >
+              <ArrowRightCircle size={24} />
+            </motion.div>
+          </motion.div>
+        </Link>
+
+        <div className={styles.aboutMe}>
+          <div className={styles.aboutMeImageContainer}>
+            <Image className={styles.aboutMeImage} src={bailey} alt={'Bailey in Venice'} width={409} />
+          </div>
+          <div className={styles.aboutMeText}>
+            <p>Hi I&apos;m Bailey Segail.</p>
+            <p>I build, launch and scale greenfield projects by leading teams and creating quality software.</p>
+            <p className={styles.highlight}>
+              When I&apos;m not on the computer you can find me powerlifting at the gym, jamming to progressive metal or
+              travelling the world.
+            </p>
+          </div>
+        </div>
 
         <div id={'contact'} className={styles.contact}>
           <div className={styles.contactOpening}>
@@ -108,7 +143,7 @@ const Home: NextPage = () => {
             </div>
           ) : null}
         </div>
-      </main>
+      </div>
 
       <Footer />
     </div>

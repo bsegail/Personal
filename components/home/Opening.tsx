@@ -15,8 +15,8 @@ const Opening: React.FC = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll()
   const spaceY = useParallax(scrollYProgress, -100);
-  const rocketY = useParallax(scrollYProgress, 900);
-  const rocketX = useParallax(scrollYProgress, -300);
+  const rocketY = useParallax(scrollYProgress, 1200);
+  const rocketX = useParallax(scrollYProgress, -400);
   const gravityY = useParallax(scrollYProgress, 100);
 
   return (
@@ -38,36 +38,36 @@ const Opening: React.FC = () => {
             </motion.div>
           </div>
         </div>
-
+        <div />
         <div className={styles.openingImage} ref={ref}>
           <motion.div className={styles.superposition} style={{ y: spaceY }}>
             <Image
               alt={'Space background'}
               src={rocketBackground}
+              priority={true}
               width={408}
               height={374}
-              className={styles.superposition}
-              priority={true}
+              objectFit={'contain'}
             />
           </motion.div>
           <motion.div className={styles.superposition} style={{ y: rocketY, x: rocketX }}>
             <Image
               alt={'Rocket image'}
               src={rocket}
+              priority={true}
               width={408}
               height={374}
-              className={styles.superposition}
-              priority={true}
+              objectFit={'contain'}
             />
           </motion.div>
           <motion.div className={styles.superposition} style={{ y: gravityY }}>
             <Image
               alt={'Gravity'}
               src={gravity}
+              priority={true}
               width={408}
               height={374}
-              className={styles.superposition}
-              priority={true}
+              objectFit={'contain'}
             />
           </motion.div>
         </div>
