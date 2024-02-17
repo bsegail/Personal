@@ -14,44 +14,47 @@ function useParallax(value: MotionValue<number>, distance: number) {
 const width = 408
 const height = 374
 
+const base = 50
+
+
 export const Rocket = () => {
   const ref = useRef(null)
   const {scrollYProgress} = useScroll()
-  const spaceY = useParallax(scrollYProgress, -50)
-  const rocketY = useParallax(scrollYProgress, 150)
-  const rocketX = useParallax(scrollYProgress, -50)
-  const gravityY = useParallax(scrollYProgress, 50)
+  const spaceY = useParallax(scrollYProgress, -base * 7)
+  const rocketY = useParallax(scrollYProgress, base * 3 * 7)
+  const rocketX = useParallax(scrollYProgress, -base * 7)
+  const gravityY = useParallax(scrollYProgress, base * 7)
 
   return (
     <div ref={ref} style={{width, height}} className={styles.rocket}>
-      <div
+      <motion.div
         className={styles.superposition}
-                  //style={{y: spaceY}}
+                  style={{y: spaceY}}
       >
         <Image
           alt={'Space background'}
           src={rocketBackground}
           priority={true}
         />
-      </div>
-      <div className={styles.superposition}
-        //style={{y: rocketY, x: rocketX}}
+      </motion.div>
+      <motion.div className={styles.superposition}
+        style={{y: rocketY, x: rocketX}}
       >
         <Image
           alt={'Rocket image'}
           src={rocket}
           priority={true}
         />
-      </div>
-      <div className={styles.superposition}
-        //style={{y: gravityY}}
+      </motion.div>
+      <motion.div className={styles.superposition}
+        style={{y: gravityY}}
       >
         <Image
           alt={'Gravity'}
           src={gravity}
           priority={true}
         />
-      </div>
+      </motion.div>
     </div>
   )
 }

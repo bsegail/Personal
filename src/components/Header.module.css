@@ -40,3 +40,13 @@
 .list li a {
     color: #838190;
 }
+
+@media (max-width: 768px) {
+    .name {
+        font-size: 1.25rem;
+    }
+    .list li {
+        font-size: 0.75rem;
+    }
+
+}
