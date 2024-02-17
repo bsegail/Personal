@@ -1,6 +1,12 @@
+.container {
+    background-color: #F7F7F7;
+    width: 100%;
+    margin: 96px auto 0;
+    padding: 48px 0;
+}
 .contact {
     max-width: 768px;
-    margin: 96px auto;
+    margin: 0 auto;
 }
 
 .contactOpening {
@@ -25,4 +31,11 @@
 
 .formMessage {
     text-align: center;
+}
+
+
+@media (max-width: 980px) {
+    .container {
+        margin-top: 48px;
+    }
 }

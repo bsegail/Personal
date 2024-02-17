@@ -39,6 +39,7 @@ export const Contact = () => {
   }, [])
 
   return (
+    <div className={styles.container}>
     <Container id={'contact'} className={styles.contact}>
       <div className={styles.contactOpening}>
         <h2>Contact</h2>
@@ -62,5 +63,6 @@ export const Contact = () => {
         </div>
       ) : null}
     </Container>
+    </div>
   )
 }

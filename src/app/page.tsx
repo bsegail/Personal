@@ -20,7 +20,7 @@ export default function Home() {
           <BigWWeb/>
           <Ditno />
         </div>
-        {/*<AboutMe/>*/}
+        <AboutMe/>
         <Contact/>
       </main>
     </div>

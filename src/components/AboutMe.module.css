@@ -1,13 +1,39 @@
 .AboutMe {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 48px;
+    align-items: center;
+}
 
+.AboutMe img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .AboutMe p {
-    font-size: 32px;
+    font-size: 2rem;
     margin-bottom: 24px;
 }
 
 .callout {
     color: #838190;
 }
+
+@media(max-width: 980px) {
+    .AboutMe {
+        grid-template-columns: 1fr;
+    }
+
+    .AboutMe img {
+        max-height: 360px;
+        margin-bottom: 48px;
+    }
+
+    .AboutMe p {
+        font-size: 1.5rem;
+    }
+
+}
+
 
