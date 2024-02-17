@@ -1,0 +1,33 @@
+.Hero {
+    display: grid;
+    margin-top: 96px;
+    grid-template-columns: 1fr 408px;
+    grid-column-gap: 48px;
+}
+
+.text {
+    margin-right: 48px;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+}
+
+.arrow > p {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+
+}
+
+.superposition {
+    position: absolute;
+}
+
+@media(max-width: 980px) {
+    .Hero {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

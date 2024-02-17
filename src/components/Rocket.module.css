@@ -1,0 +1,9 @@
+.superposition {
+    position: absolute;
+}
+
+@media(max-width: 980px) {
+    .rocket {
+        margin-bottom: 48px;
+    }
+}

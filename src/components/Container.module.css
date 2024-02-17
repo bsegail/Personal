@@ -1,0 +1,18 @@
+.Container {
+    max-width: 1368px;
+    width: 100%;
+}
+
+@media(max-width: calc(1440px + 96px)) {
+    .Container {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+}
+
+@media(max-width: 768px) {
+    .Container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}

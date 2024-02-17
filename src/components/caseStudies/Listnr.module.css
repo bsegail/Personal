@@ -1,0 +1,55 @@
+.Listnr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.Listnr h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail {
+    background: #F7F7F7;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    padding: 48px;
+}
+
+.detail > p {
+    line-height: 1.69;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.image img {
+    max-width: 100%;
+    object-fit: contain;
+    padding: 24px;
+}
+
+.role {
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 980px) {
+    .Listnr {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

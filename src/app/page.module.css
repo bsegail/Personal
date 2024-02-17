@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.caseStudies {
+  display: flex;
+  flex-direction: column;
+  row-gap: 48px;
+  margin-top: 96px;
+  margin-bottom: 96px;
+}

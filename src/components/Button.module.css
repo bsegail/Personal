@@ -1,0 +1,26 @@
+.button {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: #201D46;
+    border: 1px solid #201D46;
+    border-radius: 2px;
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    width: auto;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.button:focus {
+    opacity: 0.5;
+}
+
+.buttonLoading {
+    margin-right: 8px;
+}
