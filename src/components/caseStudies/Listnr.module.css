@@ -53,3 +53,13 @@
         flex-direction: column-reverse;
     }
 }
+
+@media (max-width: 768px) {
+    .Listnr h3 {
+        font-size: 2rem;
+    }
+
+    .detail {
+        padding: 24px;
+    }
+}

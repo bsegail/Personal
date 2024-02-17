@@ -6,8 +6,8 @@ import React from 'react'
 const rubik = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Bailey Segail",
-  description: "I’m a purpose driven, senior engineer that leads teams and aligns business goals, project outcomes, and user needs when creating digital products.",
+  title: "Bailey Segail | Technical Lead",
+  description: "I’m a Tech Lead that’s delivered inspiring digital products for some of Australia’s largest brands.",
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
     <head>
-      <title>{'Bailey Segail'}</title>
+      <title>{'Bailey Segail | Technical Lead'}</title>
       <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>

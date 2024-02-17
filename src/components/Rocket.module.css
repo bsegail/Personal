@@ -1,6 +1,15 @@
+.rocket {
+    max-width: 100%;
+}
+
 .superposition {
     position: absolute;
 }
+
+.rocket img {
+    max-width: 100%;
+}
+
 
 @media(max-width: 980px) {
     .rocket {
