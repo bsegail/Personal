@@ -10,7 +10,7 @@ const Header: React.FC = () => {
         <nav>
           <ul className={styles.list}>
             <li>
-              <a href={'/documents/Bailey_Segail_20240217.pdf'} target={'_blank'} rel={'noreferrer'}>
+              <a href={'/documents/Bailey_Segail_20240306.pdf'} target={'_blank'} rel={'noreferrer'}>
                 Download CV
               </a>
             </li>
