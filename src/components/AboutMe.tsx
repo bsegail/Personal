@@ -13,7 +13,7 @@ export const AboutMe: React.FC = () => {
             alt={'Bailey Segail line drawing'}
             width={866}
             height={866}
-            objectFit={'contain'}
+            style={{objectFit: 'contain'}}
           />
         </div>
         <div>
