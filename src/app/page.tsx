@@ -7,6 +7,7 @@ import { AboutMe } from '@/components/AboutMe'
 import { Contact } from '@/components/Contact'
 import Header from '@/components/Header'
 import { Ditno } from '@/components/caseStudies/Ditno'
+import {Vudoo} from "@/components/caseStudies/Vudoo";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <main className={styles.main}>
         <Hero/>
         <div className={styles.caseStudies}>
+          <Vudoo/>
           <Listnr/>
           <BigWMobile/>
           <BigWWeb/>

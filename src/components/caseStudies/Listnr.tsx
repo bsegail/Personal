@@ -5,7 +5,7 @@ import Image from 'next/image'
 export const Listnr = () => {
     return (
         <Container>
-            <div className={styles.Listnr}>
+            <div className={`${styles.Listnr}`}>
                 <div className={styles.detail}>
                     <h3>LiSTNR</h3>
                     <p className={styles.role}>Technical lead | Novon</p>

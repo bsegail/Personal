@@ -1,4 +1,4 @@
-import styles from './Listnr.module.css'
+  import styles from './Listnr.module.css'
 import { Container } from '@/components/Container'
 import Image from 'next/image'
 
